@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="todo.css">
+    <title>TO DO APP</title>
+    <style>
+    body {
+    margin: 0;
+    font-family: 'Poppins', 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+.navbar {
+    background-color: #58390f;
+    color: #fff;
+    padding: 0 20px;
+    position: sticky;
+    top: 0;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    
+}
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center the menu */
+  position: relative;
+  width: 100%;
+}
+.container {
+  border: 2px solid black;
+  padding: 16px;
+  margin: 20px;
+  border-radius: 6px; 
+}
+.navbar-menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.navbar-link {
+    text-decoration: none;
+    color: #fff;
+    margin: 0 20px;
+    font-size: 1.2rem;
+    position: relative;
+    transition: color 0.3s, transform 0.3s;
+}
+.navbar-link:hover {
+    color: #EF88AD;
+}
+.navbar-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: #EF88AD;
+    transition: width 0.3s ease, left 0.3s ease;
+}
+.navbar-link:hover::after {
+    width: 100%;
+    left: 0;
+}
+.navbar-container {
+  display: flex;
+  align-items: center;
+}
+</style>
+</head>
+<body>
+    <nav class="navbar">
+  <div class="navbar-container">
+    <ul class="navbar-menu">
+      <li><a class="navbar-link" href="index.html">Home</a></li>
+      <li><a class="navbar-link" href="studio.html">Studio</a></li>
+      <li><a class="navbar-link" href="notes.html">Notes</a></li>
+      <li><a class="navbar-link" href="todo.html">To-Do</a></li>
+    </ul>
+  </div>
+</nav>
+</head>
+<body>
+      <div id="notes-section" class="hidden">
+    <h2>📝 Notes</h2>
+    <input id="noteInput" placeholder="Write note">
+    <button onclick="addNote()">Add</button>
+    <ul id="noteList"></ul>
+  </div>
+<script src="todo.js"></script>
+</body>
+</html>

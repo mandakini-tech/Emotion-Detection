@@ -2,71 +2,77 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Emotion Detection App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Emotion Detection</title>
   <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
 <nav class="navbar">
-  <h1>🎭 Emotion Detection</h1>
-  <div class="nav-buttons">
-    <button onclick="showCamera()">📷 Camera</button>
-    <button onclick="showNotes()">📝 Notes</button>
-    <button onclick="showTodo()">✅ To-Do</button>
-    <button onclick="generateMusic()">🎵 Generate Music</button>
+  <div class="navbar-container">
+    <ul class="navbar-menu">
+      <li><a class="navbar-link" href="index.html">Home</a></li>
+      <li><a class="navbar-link" href="studio.html">Studio</a></li>
+      <li><a class="navbar-link" href="notes.html">Notes</a></li>
+      <li><a class="navbar-link" href="todo.html">To-Do</a></li>
+    </ul>
   </div>
 </nav>
 
-<div id="main">
+<section class="hero">
+  <div class="hero-overlay">
+    <h1>Lofi Studio</h1>
+    <p>Scroll to explore</p>
+  </div>
+</section>
 
-<div id="camera-section" class="hidden">
-  <h2>📷 Camera</h2>
-  <button onclick="startCamera()">Start Emotion Detection</button>
-  <p id="emotionResult">Detected Emotion: --</p>
-</div>
-  <div id="music-section" class="hidden">
-    <h2>🎵 Lo-Fi Music Generator</h2>
-    <div id="musicInfo">
-      🎧 <b>Lo-Fi music</b> (Low Fidelity) is calm, soft, and relaxing music.<br>
-      It is commonly used for <b>studying, coding, relaxing, and stress relief</b>.
-      <br><br>
-      This generator creates <b>emotion-based lo-fi tracks</b> using AI.
-      Your detected mood helps generate music with:
-      <ul>
-        <li>🎶 Soft beats</li>
-        <li>🎹 Smooth melodies</li>
-        <li>🌙 Calm ambience</li>
-      </ul>
+<section class="about">
+  <div class="about-container">
+    <div class="about-text">
+        <h4>
+<p><i>
+ Lofi Studio was founded in 2022 and first gained recognition through its
+        animations for Lofi Girl compilations and her iconic 24/7 livestream.
+      </i>
+       
+      </p>
+        </h4>
+   <h4>
+<p><i>
+  Since then, the studio has grown into a creative space known for its
+        strong visual storytelling and artistic versatility, working on
+        everything from indie releases to collaborations with Disney,
+        Psyonix, and more...
+      </i>
+      
+      </p>
+   </h4>   
     </div>
-    <div id="text-sec" >
-    <h2>📝 Notes</h2>
-    <input id="textInput" placeholder="Write text">
-    <button onclick="addText()">Add</button>
-  </div>
 
-    <p id="musicStatus">Click <b>Generate Music</b> to begin 🎼</p>
+    <div class="about-image">
+      <img src="https://lofistudio.com/_next/image?url=https%3A%2F%2Fadmin.lofistudio.com%2Fuploads%2FLofigirl_website_B_004_e475c30eb9.png&w=3840&q=75" alt="Lofi Artist"  >
+    </div>
 
-    <audio id="musicPlayer" controls></audio>
   </div>
-  <div id="notes-section" class="hidden">
-    <h2>📝 Notes</h2>
-    <input id="noteInput" placeholder="Write note">
-    <button onclick="addNote()">Add</button>
-    <ul id="noteList"></ul>
-  </div>
+</section>
 
-  
-  <div id="todo-section" class="hidden">
-    <h2>✅ To-Do List</h2>
-    <input type="text" id="todoText" placeholder="Enter task">
-    <input type="date" id="todoDate">
-    <button onclick="addTodo()">Add</button>
-    <ul id="todoList"></ul>
-  </div>
+<button class="open-chat-button" onclick="toggleChat()">Chat with Us</button>
 
+
+<button class="open-chat-button" onclick="toggleChat()">Chat with Us</button>
+
+<div class="chat-container">
+    <div class="chat-header">
+        <h3>Chat With Us</h3>
+        <button onclick="toggleChat()" style="border: 2px solid rgb(33, 33, 33); background:#4c96e5; cursor: pointer;border-radius: 5px; float: right;"><b><i>Close</i></b></button>
+    </div>
+    <div class="chat-messages">
+    </div>
+    <div class="chat-input">
+        <input type="text" placeholder="Type your message..." id="chatInput">
+        <button onclick="sendMessage()">Send</button>
+    </div>
 </div>
-
 <script src="script.js"></script>
 </body>
 </html>
