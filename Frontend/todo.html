@@ -5,15 +5,15 @@
     <title>TO DO APP</title>
     <style>
     body {
-    margin: 0;
-    font-family: 'Poppins', 'Arial', sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
+  margin: 0;
+  min-height: 100vh;
+  background: black;
 }
+
 .navbar {
-    background-color: #58390f;
+    background-color: black;
     color: #fff;
-    padding: 0 20px;
+    padding: 10px 20px;
     position: sticky;
     top: 0;
     height: 100px;
@@ -22,16 +22,17 @@
     align-items: center;
     z-index: 2;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    
+      background-color: rgba(0, 0, 0, 0.4); /* 👈 transparency */
+  backdrop-filter: blur(10px);
+  border: 10px;
 }
-
-
 .navbar-container {
   display: flex;
   align-items: center;
   justify-content: center; /* Center the menu */
   position: relative;
   width: 100%;
+  padding: 30px;
 }
 .container {
   border: 2px solid black;
@@ -40,24 +41,29 @@
   border-radius: 6px; 
 }
 
-
-
 .navbar-menu {
   display: flex;
   list-style: none;
   margin: 0;
   padding: 0;
+  gap: 40px;
+}
+.nav-contact {
+  margin-left: auto;   /* ✅ pushes Contact to extreme right */
 }
 .navbar-link {
-    text-decoration: none;
-    color: #fff;
-    margin: 0 20px;
-    font-size: 1.2rem;
     position: relative;
-    transition: color 0.3s, transform 0.3s;
+  font-size: 2em;
+  margin-bottom: 10px;
+  z-index: 2;
+  text-align: center;
+  font-family: "Arial Black", sans-serif;
+  color: #9d9c9c;
+  text-decoration: none;
+
 }
 .navbar-link:hover {
-    color: #EF88AD;
+    color: #ffffff;
 }
 .navbar-link::after {
     content: '';
@@ -66,7 +72,7 @@
     left: 50%;
     width: 0;
     height: 2px;
-    background-color: #EF88AD;
+    background-color: #fcfafb;
     transition: width 0.3s ease, left 0.3s ease;
 }
 .navbar-link:hover::after {
@@ -77,16 +83,101 @@
   display: flex;
   align-items: center;
 }
-</style>
+/* CONTACT BUTTON */
+.contact-btn {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 10px 12px;
+  border-radius: 40px;
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  color: #fff;
+  text-decoration: none;
+  font-family: "Arial Black", sans-serif;
+  font-size: 1.2rem;
+  background: linear-gradient(135deg, #0d0b1f, #1a1535);
+  transition: all 0.3s ease;
+  cursor: pointer;
+   margin-left: 300px;
+}
+
+/* Vertical divider */
+.contact-divider {
+  width: 2px;
+  height: 28px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Arrow */
+.contact-arrow {
+  font-size: 1.6rem;
+  transition: transform 0.3s ease;
+}
+
+/* Hover effects */
+.contact-btn:hover {
+  background: linear-gradient(135deg, #15123b, #241e52);
+  border-color: #fff;
+}
+
+.contact-btn:hover .contact-arrow {
+  transform: translateX(6px);
+}
+
+.main-bg-video{
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+}
+
+/* Responsive Rules for Mobile */
+@media (max-width: 768px) {
+  .studio-container {
+    /* Switch to 1 column on tablets and phones */
+    grid-template-columns: 1fr;
+    padding: 10px;
+  }
+
+  .box {
+    height: 250px; /* Slightly shorter boxes for smaller screens */
+  }
+}
+.bg-video {
+  position: fixed;      /* 👈 stays fixed behind everything */
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;          /* 👈 sends it behind content */
+  pointer-events: none; /* optional */
+}
+    </style>
 </head>
 <body>
-    <nav class="navbar">
+       <video autoplay muted loop playsinline class="bg-video main-bg-video">
+        <source
+          src="https://www.shutterstock.com/shutterstock/videos/3572011853/preview/stock-footage-this-stock-motion-video-shows-a-synthwave-style-background-of-landscape-with-palm-trees-and-endless.webm"
+          type="video/mp4"
+        />
+        
+      </video>
+   <nav class="navbar">
   <div class="navbar-container">
     <ul class="navbar-menu">
-      <li><a class="navbar-link" href="index.html">Home</a></li>
-      <li><a class="navbar-link" href="studio.html">Studio</a></li>
-      <li><a class="navbar-link" href="notes.html">Notes</a></li>
-      <li><a class="navbar-link" href="todo.html">To-Do</a></li>
+      <li><a class="navbar-link" href="index.html">HOME</a></li>
+      <li><a class="navbar-link" href="studio.html">STUDIO</a></li>
+      <li><a class="navbar-link" href="notes.html">NOTES</a></li>
+      <li><a class="navbar-link" href="todo.html">TO-DO</a></li>
+       <li class="nav-contact">
+  <a class="contact-btn" href="contact.html">
+    <span class="contact-text">CONTACT</span>
+    <span class="contact-divider"></span>
+    <span class="contact-arrow">→</span>
+  </a>
+</li>
+
+
+
     </ul>
   </div>
 </nav>
