@@ -66,3 +66,15 @@
   align-items: center; /* This keeps it centered horizontally */
   font-family: "Arial Black", sans-serif;
 }
+<<<<<<< HEAD
+=======
+.main-heading {
+  position: relative;
+  font-size: 2em;
+  margin-bottom: 10px;
+  z-index: 2;
+  text-align: center;
+  font-family: "Arial Black", sans-serif;
+  color: #333;
+}
+>>>>>>> 3739712699047f2c6ba631bfd6974924b36bdd13
