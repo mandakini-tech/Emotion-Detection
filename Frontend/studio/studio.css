@@ -1,0 +1,142 @@
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: black;
+}
+
+/* NAVBAR */
+.navbar {
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
+  height: 100px;
+  z-index: 2;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+}
+
+.navbar-menu {
+  display: flex;
+  list-style: none;
+  gap: 40px;
+}
+
+.navbar-link {
+  font-size: 2em;
+  font-family: "Arial Black", sans-serif;
+  color: #9d9c9c;
+  text-decoration: none;
+}
+
+.navbar-link:hover {
+  color: white;
+}
+
+/* CONTACT BUTTON */
+.contact-btn {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 10px 12px;
+  border-radius: 40px;
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  color: #fff;
+  text-decoration: none;
+}
+
+/* BACKGROUND VIDEO */
+.main-bg-video {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  filter: blur(8px);
+  z-index: -1;
+}
+
+/* HEADING */
+.main-heading {
+  text-align: center;
+  color: white;
+  margin: 30px 0;
+}
+
+/* GRID */
+.studio-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* BOX */
+.box {
+  position: relative;
+  height: 350px;
+  overflow: hidden;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+/* VIDEO */
+.bg-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* TEXT */
+.content {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  color: white;
+}
+
+/* OVERLAY */
+#overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.75);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+/* PLAYER */
+.player {
+  width: 70%;
+  aspect-ratio: 16/9;
+  background: black;
+  border-radius: 14px;
+  overflow: hidden;
+  position: relative;
+}
+
+.player video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.player-controls {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}

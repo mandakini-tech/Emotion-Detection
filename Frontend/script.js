@@ -75,3 +75,21 @@ function addTodo() {
   document.getElementById("todoText").value = "";
   document.getElementById("todoDate").value = "";
 }
+
+// // for pause and play video
+// const video = document.getElementById("bg-video");
+// const btn = document.getElementById("PlayPauseBtn");
+
+// btn.addEventListener("click", () => {
+//   if(video.paused){
+//     video.play();
+//     btn.textContent = "Pause";
+
+//   } else{
+//     video.pause();
+//     btn.textContent = "Play";
+//   }
+// });
+
+// // minimize maximize video
+
