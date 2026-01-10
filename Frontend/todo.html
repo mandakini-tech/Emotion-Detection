@@ -151,16 +151,21 @@
   z-index: -1;          /* 👈 sends it behind content */
   pointer-events: none; /* optional */
 }
+.bg-video-wrapper {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+}
     </style>
 </head>
 <body>
-       <video autoplay muted loop playsinline class="bg-video main-bg-video">
-        <source
-          src="https://www.shutterstock.com/shutterstock/videos/3572011853/preview/stock-footage-this-stock-motion-video-shows-a-synthwave-style-background-of-landscape-with-palm-trees-and-endless.webm"
-          type="video/mp4"
-        />
-        
-      </video>
+   
+  <div class="bg-video-wrapper">
+    <video autoplay muted loop playsinline class="bg-video">
+      <source src="https://www.shutterstock.com/shutterstock/videos/3572011853/preview/stock-footage-this-stock-motion-video-shows-a-synthwave-style-background-of-landscape-with-palm-trees-and-endless.webm" type="video/webm">
+    </video>
+  </div>
    <nav class="navbar">
   <div class="navbar-container">
     <ul class="navbar-menu">

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+
+
+<nav class="navbar">
+  <div class="navbar-container">
+    <ul class="navbar-menu">
+
+      <li><a class="navbar-link" href="index.html">HOME</a></li>
+      <li><a class="navbar-link" href="studio.html">STUDIO</a></li>
+      <li><a class="navbar-link" href="notes.html">NOTES</a></li>
+      <li><a class="navbar-link" href="todo.html">TO-DO</a></li>
+       <li class="nav-contact">
+  <a class="contact-btn" href="contact.html">
+    <span class="contact-text">CONTACT</span>
+    <span class="contact-divider"></span>
+    <span class="contact-arrow">→</span>
+  </a>
+</li>
+
+
+    </ul>
+  </div>
+</nav>
+   
+  <div class="bg-video-wrapper">
+    <video autoplay muted loop playsinline class="bg-video">
+      <source src="https://www.shutterstock.com/shutterstock/videos/3572011853/preview/stock-footage-this-stock-motion-video-shows-a-synthwave-style-background-of-landscape-with-palm-trees-and-endless.webm" type="video/webm">
+    </video>
+  </div>
+<section class="contact-section">
+  <div class="contact-card">
+
+    <!-- LEFT FORM -->
+    <div class="contact-form">
+      <h1>Let’s talk!</h1>
+
+      <div class="row">
+        <div class="field">
+          <label>LAST NAME *</label>
+          <input type="text" placeholder="Your last name" required>
+        </div>
+
+        <div class="field">
+          <label>FIRST NAME *</label>
+          <input type="text" placeholder="Your first name" required>
+        </div>
+      </div>
+
+      <div class="field">
+        <label>EMAIL *</label>
+        <input type="email" placeholder="example@email.com" required>
+      </div>
+
+      <div class="field">
+        <label>SUBJECT *</label>
+        <input type="text" placeholder="Subject" required>
+      </div>
+
+      <div class="field">
+        <label>MESSAGE *</label>
+        <textarea placeholder="Your message" required></textarea>
+      </div>
+
+      <button class="send-btn">
+        SEND MESSAGE <span>→</span>
+      </button>
+    </div>
+
+    <!-- RIGHT IMAGE -->
+    <div class="contact-image">
+      <img src="https://lofigirl.com/_next/image?url=%2Fassets%2Fimages%2Fcontact.webp&w=3840&q=75" alt="Lofi Girl">
+    </div>
+
+  </div>
+</section>
+
+
+<script src="contact.js"></script>
+</body>
+</html>

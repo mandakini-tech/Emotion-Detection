@@ -4,7 +4,12 @@
     <link rel="stylesheet" href="todo.css">
     <title>TO DO APP</title>
     <style>
-  
+  .bg-video-wrapper {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+}
        body {
   margin: 0;
   min-height: 100vh;
@@ -172,13 +177,12 @@
     </ul>
   </div>
 </nav>
-   <video autoplay muted loop playsinline class="bg-video main-bg-video">
-        <source
-          src="https://www.shutterstock.com/shutterstock/videos/3572011853/preview/stock-footage-this-stock-motion-video-shows-a-synthwave-style-background-of-landscape-with-palm-trees-and-endless.webm"
-          type="video/mp4"
-        />
-        
-      </video> 
+ 
+  <div class="bg-video-wrapper">
+    <video autoplay muted loop playsinline class="bg-video">
+      <source src="https://www.shutterstock.com/shutterstock/videos/3572011853/preview/stock-footage-this-stock-motion-video-shows-a-synthwave-style-background-of-landscape-with-palm-trees-and-endless.webm" type="video/webm">
+    </video>
+  </div>
 </head>
 <body>
       <div id="notes-section" class="hidden">
@@ -189,4 +193,4 @@
   </div>
 <script src="todo.js"></script>
 </body>
-</html>
+</html>   

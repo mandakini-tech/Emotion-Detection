@@ -50,3 +50,9 @@ body {
     margin: 10px 0;
     gap: 10px;
 }
+.main-heading {
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 20px;
+    color: white;
+}

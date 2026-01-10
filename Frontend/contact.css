@@ -23,6 +23,9 @@
   font-size: 1.2rem;
   opacity: 0.8;
 }
+.hero{
+  color:white;
+}
 
 .about {
   padding: 75px 20px;
@@ -297,4 +300,117 @@
   object-fit: cover;
   z-index: -1;          /* 👈 sends it behind content */
   pointer-events: none; /* optional */
+}
+
+/* CONTACT SECTION */
+.contact-section {
+  min-height: calc(100vh - 120px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+/* GLASS CARD */
+.contact-card {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  gap: 50px;
+  padding: 50px;
+  border-radius: 24px;
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255,255,255,0.2);
+  color: white;
+}
+
+/* LEFT FORM */
+.contact-form {
+  flex: 1.2;
+  
+}
+
+.contact-form h1 {
+  font-size: 3rem;
+  margin-bottom: 30px;
+}
+
+.row {
+  display: flex;
+  gap: 20px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 18px;
+  flex: 1;
+}
+
+.field label {
+  font-size: 0.9rem;
+  margin-bottom: 6px;
+  opacity: 0.85;
+}
+
+.field input,
+.field textarea {
+  background: #000;
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: 10px;
+  padding: 14px;
+  color: white;
+  font-size: 1rem;
+  outline: none;
+}
+
+.field textarea {
+  min-height: 140px;
+  resize: none;
+}
+
+/* SEND BUTTON */
+.send-btn {
+  margin-top: 20px;
+  width: 100%;
+  padding: 16px;
+  border-radius: 40px;
+  border: none;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  background: linear-gradient(135deg, #d3d3d3, #a8a8a8);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.send-btn span {
+  font-size: 1.4rem;
+}
+
+/* RIGHT IMAGE */
+.contact-image {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .contact-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .row {
+    flex-direction: column;
+  }
 }
