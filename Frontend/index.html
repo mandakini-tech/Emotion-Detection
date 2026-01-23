@@ -13,24 +13,36 @@
 
 <nav class="navbar">
   <div class="navbar-container">
-    <ul class="navbar-menu">
 
+    <!-- LEFT -->
+    <div class="nav-left">
+      <div class="hamburger" onclick="toggleSidebar()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+
+    <!-- CENTER -->
+    <ul class="navbar-menu">
       <li><a class="navbar-link" href="index.html">HOME</a></li>
       <li><a class="navbar-link" href="studio.html">STUDIO</a></li>
       <li><a class="navbar-link" href="notes.html">NOTES</a></li>
       <li><a class="navbar-link" href="todo.html">TO-DO</a></li>
-       <li class="nav-contact">
-  <a class="contact-btn" href="contact.html">
-    <span class="contact-text">CONTACT</span>
-    <span class="contact-divider"></span>
-    <span class="contact-arrow">→</span>
-  </a>
-</li>
-
-
     </ul>
+
+    <!-- RIGHT -->
+    <div class="nav-right">
+      <a class="contact-btn" href="contact.html">
+        <span class="contact-text">CONTACT</span>
+        <span class="contact-divider"></span>
+        <span class="contact-arrow">→</span>
+      </a>
+    </div>
+
   </div>
 </nav>
+
   <div class="bg-video-wrapper">
     <video autoplay muted loop playsinline class="bg-video">
       <source src="https://www.shutterstock.com/shutterstock/videos/3572011853/preview/stock-footage-this-stock-motion-video-shows-a-synthwave-style-background-of-landscape-with-palm-trees-and-endless.webm" type="video/webm">
@@ -144,5 +156,25 @@
 
 <script src="footer.js"></script>
 <script src="script.js"></script>
+
+<!-- Sidebar -->
+<div class="sidebar" id="sidebar">
+  <div class="sidebar-header">
+    <h2>Emotion Detection</h2>
+    <button class="close-btn" onclick="toggleSidebar()">✕</button>
+  </div>
+
+  <div class="sidebar-content">
+    <p>Detect emotions using camera or text input.</p>
+
+    <button class="sidebar-action-btn" onclick="startEmotionDetection()">
+      Start Detection →
+    </button>
+  </div>
+</div>
+
+<!-- Overlay -->
+<div class="sidebar-overlay" id="sidebarOverlay" onclick="toggleSidebar()"></div>
+
 </body>
 </html>

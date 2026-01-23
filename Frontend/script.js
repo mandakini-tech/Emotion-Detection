@@ -76,6 +76,21 @@ function addTodo() {
   document.getElementById("todoDate").value = "";
 }
 
+
+function toggleSidebar() {
+  const sidebar = document.getElementById("sidebar");
+  const overlay = document.getElementById("sidebarOverlay");
+
+  sidebar.classList.toggle("active");
+  overlay.classList.toggle("active");
+}
+
+function startEmotionDetection() {
+  alert("Emotion Detection Started!");
+  // You can connect this to camera / ML logic later
+}
+
+
 // // for pause and play video
 // const video = document.getElementById("bg-video");
 // const btn = document.getElementById("PlayPauseBtn");
